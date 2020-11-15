@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quiz</title>
+        <link rel = "stylesheet" href="css/styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>Quiz time!</h1>
+        <br><br>
+        What are you taking this quiz as? <br> <br>
+        <select id = "identification">
+                <option>Select one</option>
+                <option>Student</option>
+                <option>Professor</option>
+                <option>Other(?)</option>
+        </select>
+        <div id = "q0_feedback"></div>
+        
+        <br><br>
+        <div class = "qnumber"> #1 </div>
+        <div class = "question"> What is a duck? <br> <br>
+            <input type="radio" name = "q1" id = "Mammal" value = "Mammal"/>
+            <label for="Mammal"> Mammal </label>
+            <input type="radio" name = "q1" id = "Amphibian" value = "Amphibian"/>
+            <label for="Amphibian"> Amphibian </label>
+            <input type="radio" name = "q1" id = "Reptile" value = "Reptile"/>
+            <label for="Reptile"> Reptile </label>
+            <input type="radio" name = "q1" id = "Aquatic-b" value = "Aquatic-b"/>
+            <label for="Aquatic-b"> Aquatic Bird </label>
+            <br><br>
+            <div id = "q1_feedback"></div>
+        </div>
+        <!--br class = "seperation"/-->
+        
+        <div class = "qnumber"> #2 </div>
+        <div class = "question"> What is the first letter in the alphabet if you go backwards? <br> <br>
+        <form>
+            <input type="text" id = "q2" size = "1" />
+            <br><br>
+            <div id = "q2_feedback"></div>
+        </form>
+        </div>
+        
+        <div class = "qnumber"> #3 </div>
+        <div class = "question"> What are the two largest states? (Select two) <br> <br>
+        <input type = "checkbox" id="Texas"><label for = "Texas"> Texas </label>
+            <input type = "checkbox" id = "California"> <label for = "California"> California </label>
+            <input type = "checkbox" id = "NY"> <label for = "NY"> New York </label>
+            <input type = "checkbox" id = "Alaska"> <label for = "Alaska"> Alaska </label>
+            <br><br>
+            <div id = "q3_feedback"> </div>
+        </div>
+        
+        <div class = "qnumber"> #4 </div>
+        <div class = "question"> What is a 3 sided rectangle? <br> <br>
+            <input type="radio" name = "q4" id = "Joke" value = "Joke"/>
+            <label for="Joke"> A joke </label>
+            <input type="radio" name = "q4" id = "Triangle" value = "Triangle"/>
+            <label for="Triangle"> A triangle </label>
+            <input type="radio" name = "q4" id = "incomplete" value = "incomplete"/>
+            <label for="incomplete"> An incomplete rectangle </label>
+            <input type="radio" name = "q4" id = "All" value = "All"/>
+            <label for="All"> Could be all or some of the above </label>
+            <br><br>
+            <div id = "q4_feedback"></div>
+        </div>
+        
+        <br><br>
+        <h3 id = total></h3>
+        <div id = "submit">
+        <button id = "submitButton"> Submit </button>
+        </div>
+    </body>
+    
+    <script>
+        let q1_value = 25;
+        let q2_value = 25;
+        let q3_value = 25;
+        let q4_value = 25;
+        let score = 0;
+        
+        let q1_answer = "Aquatic-b"
+        let q2_answer = "z";
+        let q3_answer = "";
+        let q4_answer = "All"
+        
+        $("#submitButton").on("click", function() {
+            let score = 0;
+            let q0_response = $("#identification").val();
+            if(q0_response == "Select one"){
+                $("#q0_feedback").html("You uh... forgot to choose one.");
+            }
+            if(q0_response == "Student"){
+                $("#q0_feedback").html("Yo!");
+            }
+            if(q0_response == "Professor"){
+                $("#q0_feedback").html("Hello Doctor Lara!");
+            }
+            if(q0_response == "Other(?)"){
+                $("#q0_feedback").html("Who are you?!");
+            }
+            let q1_response = $("input[name=q1]:checked").val();
+            let q2_response = $("#q2").val().toLowerCase();
+            let q4_response = $("input[name=q4]:checked").val();
+            if(q1_response == q1_answer){
+                
+                $("#q1_feedback").html("Correct");
+                score += q1_value;
+            } else{
+                $("#q1_feedback").html("incorrect");
+            }
+            
+            if(q2_response == q2_answer){
+                $("#q2_feedback").html("Correct");
+                score += q2_value;
+            } else{
+                $("#q2_feedback").html("Incorrect");
+            }
+            
+            if(document.getElementById('Texas').checked == true && document.getElementById('California').checked == false && document.getElementById('NY').checked == false && document.getElementById('Alaska').checked == true){
+                $("#q3_feedback").html("Correct");
+                score += q3_value;
+            } else{
+                $("#q3_feedback").html("Incorrect");
+            }
+            if(q4_response == q4_answer){
+                $("#q4_feedback").html("Correct");
+                score += q4_value;
+            } else{
+                $("#q4_feedback").html("Incorrect");
+            }
+            $("#total").html("The total Score is: " + score);
+        });
+        
+    </script>
+    
+</html>

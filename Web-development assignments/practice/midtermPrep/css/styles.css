@@ -1,0 +1,24 @@
+table {
+    margin: 0 auto;
+    border: 1px solid black;
+    font-size: 18px;
+    width: 600px;
+    height: 250px;
+}
+tr {
+    border: 1px solid black;
+    font-size: 18px;
+}
+.row,th {
+    border-right: 1px solid black;
+    padding: 5px;
+    text-align: center;
+    font-size: 18px;
+}
+input{
+    text-align: center;
+}
+#inp{
+    text-align: center;
+    font-size: 1.5em;
+}

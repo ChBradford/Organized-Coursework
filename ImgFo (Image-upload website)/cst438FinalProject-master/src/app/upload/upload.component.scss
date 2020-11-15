@@ -1,0 +1,57 @@
+
+//Top-half of form - "form-container"
+
+.form-container {
+    padding: 3em;
+    //background: red;
+    margin-bottom: 1em;
+}
+
+.upload-card {
+    max-width: 150px;
+    margin: 0 auto;
+    transition: none !important;
+    box-shadow: none !important;
+  }
+
+  .post-container {
+    padding: 50px;  
+  }
+
+#file-descriptor {
+   text-align: center; 
+}
+
+.upload-buttons {
+    margin: 0 auto;
+    //background: lightgray;
+    max-width: 400px;
+    text-align: center;   
+}
+
+
+
+
+//Bottom-half of form - "post-form"
+
+.post-form > * {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    //background-color: blue;
+    margin-bottom: 1em;
+}
+
+.tag-chip-list {
+    width: 100%;
+}
+
+#post-button{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}

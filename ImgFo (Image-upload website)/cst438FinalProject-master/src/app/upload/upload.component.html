@@ -1,0 +1,56 @@
+
+ <div class="form-container"> 
+    <h1>Upload Your Work</h1>
+    <mat-card class="upload-card">
+        <mat-card-header>
+            <div mat-card-avatar class="header-image"></div>
+            <mat-card-title></mat-card-title>
+            <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{ exampleImg }}">
+        <mat-card-content>
+            <p id="file-descriptor">JPEG GIF PNG  <br/> (up to 10MB) </p>
+        </mat-card-content>
+        <mat-card-actions>
+        </mat-card-actions>
+    </mat-card>    
+    <div class="upload-buttons">    
+        <input mat-raised-button type="button" type="file" (change)="onFileSelected($event)">
+        <button mat-raised-button color="primary" (click)="onUpload()">Upload</button>
+        <p>{{ status }}</p>
+    </div>
+</div>
+
+<div class="post-container">  
+    <ng-template [ngIf]="validUpload === true" [ngIfElse]="none">
+        <form class="post-form"> 
+            <mat-form-field>
+                    <input matInput placeholder="Title" value="" [(ngModel)]="titleInput"  name="first">
+            </mat-form-field>
+            
+            <mat-form-field>
+                    <textarea matInput placeholder="Description" value="" [(ngModel)]="descInput" name="next"></textarea>
+            </mat-form-field>     
+            
+        <mat-form-field class="tag-chip-list">
+                    <mat-chip-list #chipList aria-label="Tag selection">
+                    <mat-chip *ngFor="let tag of tags" [selectable]="selectable"
+                            [removable]="removable" (removed)="remove(tag)">
+                        {{tag.phrase}}
+                        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                    </mat-chip>
+                    <input placeholder="Tags"
+                            [matChipInputFor]="chipList"
+                            [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                            [matChipInputAddOnBlur]="addOnBlur"
+                            (matChipInputTokenEnd)="add($event)">
+                    </mat-chip-list>
+            </mat-form-field>
+        </form> 
+        <a routerLink="/image-details"><button mat-raised-button color="primary" id="post-button" (click)="onPost()">Post</button></a>
+    </ng-template>
+
+   <ng-template #none>
+
+    </ng-template> 
+</div>

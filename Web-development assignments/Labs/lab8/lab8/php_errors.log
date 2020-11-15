@@ -1,0 +1,154 @@
+[25-Apr-2019 23:26:08 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'c9.lab8_pixabay' doesn't exist' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:29
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(29): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 29
+[25-Apr-2019 23:26:11 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'c9.lab8_pixabay' doesn't exist' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:29
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(29): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 29
+[25-Apr-2019 23:27:27 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'c9.lab8_pixabay' doesn't exist' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:29
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(29): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 29
+[25-Apr-2019 23:27:32 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'c9.lab8_pixabay' doesn't exist' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:29
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(29): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 29
+[25-Apr-2019 23:35:07 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:29
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(29): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 29
+[28-Apr-2019 02:57:40 UTC] PHP Warning:  include(../../../inc/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 4
+[28-Apr-2019 02:57:40 UTC] PHP Stack trace:
+[28-Apr-2019 02:57:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 02:57:40 UTC] PHP Warning:  include(): Failed opening '../../../inc/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 4
+[28-Apr-2019 02:57:40 UTC] PHP Stack trace:
+[28-Apr-2019 02:57:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 02:57:40 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 5
+[28-Apr-2019 02:57:40 UTC] PHP Stack trace:
+[28-Apr-2019 02:57:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 02:57:43 UTC] PHP Warning:  include(../../../inc/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 4
+[28-Apr-2019 02:57:43 UTC] PHP Stack trace:
+[28-Apr-2019 02:57:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 02:57:43 UTC] PHP Warning:  include(): Failed opening '../../../inc/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 4
+[28-Apr-2019 02:57:43 UTC] PHP Stack trace:
+[28-Apr-2019 02:57:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 02:57:43 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 5
+[28-Apr-2019 02:57:43 UTC] PHP Stack trace:
+[28-Apr-2019 02:57:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:08:04 UTC] PHP Warning:  include(../../../inc/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 4
+[28-Apr-2019 03:08:04 UTC] PHP Stack trace:
+[28-Apr-2019 03:08:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:08:04 UTC] PHP Warning:  include(): Failed opening '../../../inc/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 4
+[28-Apr-2019 03:08:04 UTC] PHP Stack trace:
+[28-Apr-2019 03:08:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:08:04 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 5
+[28-Apr-2019 03:08:04 UTC] PHP Stack trace:
+[28-Apr-2019 03:08:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:08:16 UTC] PHP Warning:  include(../../../inc/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 4
+[28-Apr-2019 03:08:16 UTC] PHP Stack trace:
+[28-Apr-2019 03:08:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:08:16 UTC] PHP Warning:  include(): Failed opening '../../../inc/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 4
+[28-Apr-2019 03:08:16 UTC] PHP Stack trace:
+[28-Apr-2019 03:08:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:08:16 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 5
+[28-Apr-2019 03:08:16 UTC] PHP Stack trace:
+[28-Apr-2019 03:08:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:08:26 UTC] PHP Warning:  include(../../../inc/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 4
+[28-Apr-2019 03:08:26 UTC] PHP Stack trace:
+[28-Apr-2019 03:08:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:08:26 UTC] PHP Warning:  include(): Failed opening '../../../inc/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 4
+[28-Apr-2019 03:08:26 UTC] PHP Stack trace:
+[28-Apr-2019 03:08:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:08:26 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 5
+[28-Apr-2019 03:08:26 UTC] PHP Stack trace:
+[28-Apr-2019 03:08:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:08:58 UTC] PHP Warning:  include(../../../inc/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 4
+[28-Apr-2019 03:08:58 UTC] PHP Stack trace:
+[28-Apr-2019 03:08:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:08:58 UTC] PHP Warning:  include(): Failed opening '../../../inc/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 4
+[28-Apr-2019 03:08:58 UTC] PHP Stack trace:
+[28-Apr-2019 03:08:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:08:58 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 5
+[28-Apr-2019 03:08:58 UTC] PHP Stack trace:
+[28-Apr-2019 03:08:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:09:04 UTC] PHP Warning:  include(../../../inc/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 4
+[28-Apr-2019 03:09:04 UTC] PHP Stack trace:
+[28-Apr-2019 03:09:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:09:04 UTC] PHP Warning:  include(): Failed opening '../../../inc/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 4
+[28-Apr-2019 03:09:04 UTC] PHP Stack trace:
+[28-Apr-2019 03:09:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:09:04 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 5
+[28-Apr-2019 03:09:04 UTC] PHP Stack trace:
+[28-Apr-2019 03:09:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:09:11 UTC] PHP Warning:  include(../../../inc/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 4
+[28-Apr-2019 03:09:11 UTC] PHP Stack trace:
+[28-Apr-2019 03:09:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:09:11 UTC] PHP Warning:  include(): Failed opening '../../../inc/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 4
+[28-Apr-2019 03:09:11 UTC] PHP Stack trace:
+[28-Apr-2019 03:09:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:09:11 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 5
+[28-Apr-2019 03:09:11 UTC] PHP Stack trace:
+[28-Apr-2019 03:09:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:09:18 UTC] PHP Warning:  include(../../../inc/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 4
+[28-Apr-2019 03:09:18 UTC] PHP Stack trace:
+[28-Apr-2019 03:09:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:09:18 UTC] PHP Warning:  include(): Failed opening '../../../inc/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 4
+[28-Apr-2019 03:09:18 UTC] PHP Stack trace:
+[28-Apr-2019 03:09:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:09:18 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 5
+[28-Apr-2019 03:09:18 UTC] PHP Stack trace:
+[28-Apr-2019 03:09:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:36:52 UTC] PHP Warning:  include(../../../inc/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 4
+[28-Apr-2019 03:36:52 UTC] PHP Stack trace:
+[28-Apr-2019 03:36:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:36:52 UTC] PHP Warning:  include(): Failed opening '../../../inc/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 4
+[28-Apr-2019 03:36:52 UTC] PHP Stack trace:
+[28-Apr-2019 03:36:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:36:52 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 5
+[28-Apr-2019 03:36:52 UTC] PHP Stack trace:
+[28-Apr-2019 03:36:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:36:54 UTC] PHP Warning:  include(../../../inc/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 4
+[28-Apr-2019 03:36:54 UTC] PHP Stack trace:
+[28-Apr-2019 03:36:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:36:54 UTC] PHP Warning:  include(): Failed opening '../../../inc/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 4
+[28-Apr-2019 03:36:54 UTC] PHP Stack trace:
+[28-Apr-2019 03:36:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:36:54 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 5
+[28-Apr-2019 03:36:54 UTC] PHP Stack trace:
+[28-Apr-2019 03:36:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:0
+[28-Apr-2019 03:37:13 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected' in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:32
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php(32): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 32
+[28-Apr-2019 03:38:58 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected' in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:32
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php(32): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 32
+[28-Apr-2019 03:39:00 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected' in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:32
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php(32): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 32
+[28-Apr-2019 03:43:07 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected' in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:32
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php(32): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 32
+[28-Apr-2019 03:43:13 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected' in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:32
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php(32): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 32
+[28-Apr-2019 03:44:00 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected' in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php:32
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php(32): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/Labs/lab8/lab8/api/favoritesAPI.php on line 32

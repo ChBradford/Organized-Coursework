@@ -1,0 +1,22 @@
+#websiteName {
+    padding-right: 50px;
+}
+
+.navbar-expand-lg {
+    width: 100%;
+    background-color: #5184d6;
+}
+
+.nav-link {
+    color: black;
+}
+
+#logInBtn {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#usersName {
+    padding-right: 20px;
+}

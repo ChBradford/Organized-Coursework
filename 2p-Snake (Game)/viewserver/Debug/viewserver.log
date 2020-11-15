@@ -1,0 +1,30 @@
+﻿  student.cpp
+c:\users\christopher\downloads\student_game_\student_game\viewserver\ground.h(214): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\christopher\downloads\student_game_\student_game\viewserver\ground.h(222): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\christopher\downloads\student_game_\student_game\viewserver\ground.h(223): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\christopher\downloads\student_game_\student_game\viewserver\ground.h(210): warning C4101: 'b': unreferenced local variable
+c:\users\christopher\downloads\student_game_\student_game\viewserver\ground.h(210): warning C4101: 'g': unreferenced local variable
+c:\users\christopher\downloads\student_game_\student_game\viewserver\ground.h(210): warning C4101: 'r': unreferenced local variable
+c:\users\christopher\downloads\student_game_\student_game\viewserver\ground.h(267): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+c:\users\christopher\downloads\student_game_\student_game\viewserver\ground.h(378): warning C4018: '>=': signed/unsigned mismatch
+c:\users\christopher\downloads\student_game_\student_game\viewserver\ground.h(386): warning C4018: '>=': signed/unsigned mismatch
+c:\users\christopher\downloads\student_game_\student_game\viewserver\ground.h(410): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+c:\users\christopher\downloads\student_game_\student_game\viewserver\ground.h(518): warning C4018: '<': signed/unsigned mismatch
+c:\users\christopher\downloads\student_game_\student_game\viewserver\student.cpp(18): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\christopher\downloads\student_game_\student_game\viewserver\student.cpp(20): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\christopher\downloads\student_game_\student_game\viewserver\student.cpp(22): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\christopher\downloads\student_game_\student_game\viewserver\student.cpp(55): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\christopher\downloads\student_game_\student_game\viewserver\student.cpp(57): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\christopher\downloads\student_game_\student_game\viewserver\student.cpp(59): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\christopher\downloads\student_game_\student_game\viewserver\student.cpp(61): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+  viewserver.vcxproj -> C:\Users\Christopher\Downloads\student_game_\student_game\Debug\servercontrol.exe
+  viewserver.vcxproj -> C:\Users\Christopher\Downloads\student_game_\student_game\Debug\servercontrol.pdb (Full PDB)

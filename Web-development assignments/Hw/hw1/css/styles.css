@@ -1,0 +1,48 @@
+p, details{
+    text-align: center;
+}
+hr{
+    width: 60%;
+    background-color: white;
+    height: 2px;
+}
+body{
+    background-color: #8B0000 !important;
+}
+footer {
+    clear: left;
+    font-size: .8em;
+    color: white;
+}
+header, nav, footer{
+    text-align: center;
+}
+nav a{ 
+    padding:15px;
+    padding-bottom: 4px;
+    font-size: 1.6em;
+    text-decoration: none; 
+    color: white; 
+}
+ul{
+    list-style-position: inside;
+}
+ul, .wrapper1{
+    text-align: center;
+}
+ul, .wrapper2{
+    display:inline-block;
+    text-align: left;
+}
+.links{
+    color: white;
+}
+.Homepics{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#hello{
+    text-align: center;
+    font-size: 1.5em;
+}

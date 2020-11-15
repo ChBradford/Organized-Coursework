@@ -1,0 +1,1 @@
+This project was made in Android Studio and utilizes Java. The purpose of this application is to simulate booking a flight and allows the user to log in to the 'admin' panel to add/remove flights.

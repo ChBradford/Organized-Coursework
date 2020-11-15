@@ -1,0 +1,21 @@
+fieldset{
+    display:table;
+    padding-left: 40px;
+}
+p{
+    display:table-row;
+}
+label{
+    display:table-cell;
+    padding-right: 5px;
+}
+input{
+    display: table-cell;
+}
+.jumbotron{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+h1{
+    padding-left: 5px
+}

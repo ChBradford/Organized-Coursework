@@ -1,0 +1,48 @@
+#header{
+    //background: rgb(238, 238, 238); 
+    height: 100px;   
+}
+
+
+#mainList{
+    float: left;    
+}
+
+.image-card {
+    max-width: 400px;
+    min-width: 125px;
+}
+
+.image-title {
+    font-size: 1.2rem;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        //background: rgb(238, 238, 238);
+        padding: 1em;
+        margin-right: 10px;
+        width: 20%;
+        height: 480px;
+        min-width: 250px;
+        margin-bottom: 1em;
+        display: flex;
+        flex-direction: column;
+
+        p {
+            margin: 0;
+        }
+
+        p.creator{
+            text-align: left;
+            font-size: 14px;
+            //padding-bottom: 4em;
+          }  
+    }
+}

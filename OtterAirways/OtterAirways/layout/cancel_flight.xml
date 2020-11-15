@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This is the Cancel_flight page-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical" >
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select a flight to cancel:" />
+
+    <Button
+        android:id="@+id/cancel0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = " "
+        android:textSize="12sp"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/cancel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textSize="12sp"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/cancel2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textSize="12sp"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/cancel3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textSize="12sp"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/cancel4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textSize="12sp"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/cancel5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textSize="12sp"
+        android:background="@android:color/transparent"/>
+</LinearLayout>

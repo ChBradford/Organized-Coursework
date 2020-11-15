@@ -1,0 +1,68 @@
+Hello, we are the capstone team that created the initial project.
+In this file we will do our best to describe key points about this project so you can easily start making additions/changes to the project.
+We will split up this documentation into separate portions so you can later easily find what you are looking for.
+
+Heads up: 
+    This project mainly uses angular material for UI aspects like buttons, input fields, forms, dialogs, etc. 
+    To keep the cohesion of this decision we made, we implore you to continue to use angular material for any new UI aspects you add.
+    This website has great documentation on how to add different material UI components: https://material.angular.io/components/categories
+
+Tim said that the following has a high chance of being useful for future groups. 
+
+Adding Different Record/Interval Types to Input Sets
+
+Input Sets are what we call the Level, Variable, Grid, Time Sets
+Currently, all input set's Record Type only have one Interval Type, which is why the user only has to input the record type. 
+Then we automatically set the interval based on the record e.g. ... (from level-set.component.ts line 58)
+
+if (this.levelSet.recordType == "pressure") {
+    this.levelSet.intervalType = "points";
+} else if (this.levelSet.recordType == "height") {
+    this.levelSet.intervalType = "rule";
+}
+
+If in the future there are multiple interval types for one record type, this code will have to be deleted and you will have to add 
+in an extra form-field to take this info in from the user.
+
+A. How it works now:
+    To understand how this works we will use Level Set as an example because it is the most complex input set that has different record/interval types.
+    When creating a Level Set you must first choose a record type before you can input any actual data.
+    This is because the data requirements you input is dynamically shown depending on the record type.
+
+B. Changes you have to make:
+    First, update the UI.
+    In the level-set.component.html file go to line 12.
+    
+    Then add the record type that is needed. This would look like...
+
+    <mat-select [(ngModel)]="levelSet.recordType" required>
+        <mat-option value="pressure"> Pressure </mat-option>
+        <mat-option value="height"> Height </mat-option>
+        <mat-option value="VALUE_OF_RECORD_TYPE"> RECORD TYPE NAME </mat-option>
+    </mat-select>
+
+    Then, depending on that record type you show the data that needs to be entered.
+    If it is a rule inteval type, there are already many instances of that in the code so you can simply copy-paste.
+    If it is a new interval type you will have to make the form for that instance. Refer back to the angular material website.
+    You will have to either change the existing checks to include your new record type or make your own like so...
+
+    Using rule interval type...
+
+    <ng-template [ngIf]="levelSet.recordType == 'pressure' || levelSet.recordType == 'height' || levelSet.recordType == 'VALUE_OF_RECORD_TYPE">
+    <mat-form-field>
+        <mat-label> Enter Start Value </mat-label>
+        ...
+
+    Using new interval type...
+
+    <ng-template [ngIf]="levelSet.recordType == 'VALUE_OF_RECORD_TYPE'">
+    <mat-form-field>
+        (THE NEW FORM YOU WILL HAVE TO MAKE)
+        ...
+
+    Secondly, update the .ts file.
+    Make sure that the "valid" variable is updated to include any new variables that might have been added. 
+
+    Lastly, if needed, update the filetest.js file to include new variables.
+    The file is under src/assets.
+    Check the exportXSet function and fix whichever set type you are updating to make sure it does not break anything.

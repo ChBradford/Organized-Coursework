@@ -1,0 +1,30 @@
+<form class="form-inline waves-light" mdbWavesEffect>
+    <div class="md-form mt-0">
+      <input class="form-control mr-sm-2" type="text" id = "searchbar" value = "" placeholder="Search">
+      <button type = "button" (click)
+       = "search()">Search!</button>
+    </div>
+  </form>
+  <div id = "wrapper">
+  <div id = "imageDisplay">
+      <mat-toolbar id = "barname">All Images</mat-toolbar>
+      <ul *ngIf="Searched == false">
+        <li *ngFor="let img of Allimages; index as i">
+          
+            
+              <mat-card class="img-card">
+                <a routerLink="/image-details" (click)="imageClick(img.title)"><img mat-card-image src="{{img.imageURL}}"></a>
+                <mat-card-content>
+                    <p class="title"> {{img.title}} </p>
+                    <p class="creator"> by: {{Usernames[i]}} </p>
+                </mat-card-content>
+              </mat-card>
+            
+            
+
+
+          
+        </li>
+      </ul>
+  </div>
+</div>

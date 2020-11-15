@@ -1,0 +1,18 @@
+<body>
+    <h1>Sign In</h1>
+    <div>
+        Username: <input type="text" name="username" [(ngModel)]="username">
+    </div>
+    <br />
+    <div>
+        Password: <input type="password" name="password" [(ngModel)]="password">
+    </div>
+    <br />
+    <div>
+        <button (click)="authenticate()" class="btn btn-success">Login</button>
+    </div>
+    <br />
+    <h3 id="error">
+        {{error}}
+    </h3>
+</body>

@@ -1,0 +1,172 @@
+<html>
+<head>
+    <link rel = "stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Shopping Cart</title>
+</head>
+
+<body>
+    <h1> Spring Break Shopping  </h1>
+
+    <table>
+    <tr>
+        <th>Product</th>
+        <th>Unit <br> Price</th>
+        <th> Quantity </th>
+        <th>Total</th>
+    </tr>
+    <tr>
+        <td>Microfiber Beach Towel</td>
+        <td>$30</td>
+        <td><input type="text" size="5" id="entertowel"></td>
+        <td id = "totaltowel"> $0 </td>
+    </tr>
+
+   <tr>
+        <td>Sunscreen 100SPF, 120ml</td>
+        <td>$10</td>
+        <td><input type="text" size="5" id="entersun"></td>
+        <td id = "totalsun"> $0</td>
+    </tr>    
+    
+    <tr>
+        <td>Ipanema Flip-flop Sandals </td>
+        <td>$20</td>
+        <td><input type="text" size="5" id="entersand"></td>
+        <td id = "totalsand"> $0 </td>
+    </tr>
+
+   <tr>
+        <td>Shipping</td>
+        <td></td>
+        <td></td>
+        <td id="totalship"></td>
+    </tr>    
+        
+    <tr>
+        <td>Subtotal</td>
+        <td></td>
+        <td></td>
+        <td id="subtotal"></td>
+    </tr>             
+        
+    <tr>
+        <td>Tax (10%)</td>
+        <td></td>
+        <td></td>
+        <td id="tax"></td>
+    </tr>
+    
+    <tr>
+        <td>Total</td>
+        <td></td>
+        <td></td>
+        <td id="total"></td>
+    </tr>
+       
+    </table>
+    
+    <h3>Shipping & Handling</h3>
+    <select id="shipping">
+        <option value="p">Select one</option>
+        <option value="$15">Next-day Delivery: $15.00</option>
+        <option value="$10">Three-day Delivery: $10.00</option>
+        <option value="$5">Regular (5-8 days):  $5.00</option>
+    </select>
+    <div id = "no"></div>
+    <br><br>
+        
+    <!--<span>I accept the terms of this purchase.</span>-->
+    <input type="checkbox" id="terms"><label for="terms">I accept the terms of this purchase.</label>
+    <br> 
+    
+    <button id = submitButton>"CONFIRM PURCHASE"</button>
+
+</body>
+    <script>
+    var tot1;
+    var tot2;
+    var tot3;
+    var ship;
+    let subtotal = 0;
+    let tax = 0;
+    let total = 0;
+    $(document).ready(function(){
+     $("#entertowel").change(function(){
+        let tot1 = $("#entertowel").val();
+        $("#totaltowel").html("$" + (tot1 * 30));
+        subtotal = subtotal + (tot1 * 30);
+        $("#subtotal").html("$" + subtotal);
+        tax = tax + ((tot1 * 30) * .1);
+        $("#tax").html("$" + tax);
+        total = tax + subtotal;
+        $("#total").html("$" + total);
+  });
+});
+    $(document).ready(function(){
+         $("#entersun").change(function(){
+            let tot2 = $("#entersun").val();
+            $("#totalsun").html("$" + (tot2 * 10));
+            subtotal = subtotal + (tot2 * 10);
+            $("#subtotal").html("$" + subtotal);
+            tax = tax + ((tot2 * 10) * .1);
+            $("#tax").html("$" + tax);
+            total = tax + subtotal;
+            $("#total").html("$" + total);
+      });
+    });
+    $(document).ready(function(){
+         $("#entersand").change(function(){
+            let tot3 = $("#entersand").val();
+            $("#totalsand").html("$" + (tot3 * 20));
+            subtotal = subtotal + (tot3 * 20);
+            $("#subtotal").html("$" + subtotal);
+            tax = tax + ((tot3 * 20) * .1);
+            $("#tax").html("$" + tax);
+            total = tax + subtotal;
+            $("#total").html("$" + total);
+      });
+    });
+    $(document).ready(function(){
+         $("#shipping").change(function(){
+            let ship = $("#shipping").val();
+            $("#totalship").html(ship)
+            if(ship == "$15"){
+                subtotal = subtotal + 15;
+                $("#subtotal").html("$" + subtotal);
+                tax = tax + (15 * .1);
+                $("#tax").html("$" + tax);
+                total = tax + subtotal;
+                $("#total").html("$" + total);
+            }
+            if(ship == "$10"){
+                subtotal = subtotal + 10;
+                $("#subtotal").html("$" + subtotal);
+                tax = tax + (10 * .1);
+                $("#tax").html("$" + tax);
+                total = tax + subtotal;
+                $("#total").html("$" + total);
+            }
+            if(ship == "$5"){
+                subtotal = subtotal + 5;
+                $("#subtotal").html("$" + subtotal);
+                tax = tax + (5 * .1);
+                $("#tax").html("$" + tax);
+                total = tax + subtotal;
+                $("#total").html("$" + total);
+            }
+           
+      });
+    });
+    $("#submitButton").on("click", function() {
+        if(!$("#terms").is(":checked")){
+          alert("You must accept the terms!")
+        }
+        
+        if($("#shipping").val() == "p"){
+            $("#no").html("A shipping option must be selected");
+            $("#no").attr("class", "unchecked");
+        }
+    });
+    </script>
+</html>

@@ -1,0 +1,61 @@
+<h2 mat-dialog-title> Create an Output Set </h2>
+
+    <mat-form-field>
+        <mat-label> Name this Output Set </mat-label>
+        <input matInput [(ngModel)]="outputSet.setName" placeholder="Output Set {{data.numOutputSets + 1}}" required>
+    </mat-form-field>
+
+    <br/>
+
+    <mat-form-field>
+        <mat-label> Select Record Type </mat-label>
+        <mat-select [(ngModel)]="outputSet.recordType" required>
+            <mat-option value="outstream"> Outstream </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <br/>
+
+    <ng-template [ngIf]="outputSet.recordType == 'outstream'">
+        <mat-form-field>
+            <mat-label> Select a Level Set </mat-label>
+            <mat-select [(value)]="outputSet.levelSet" required>
+                <mat-option *ngFor="let levelSet of data.levelSets, let i = index" [value]="levelSet"> 
+                    {{levelSet.setName}} 
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label> Select a Variable Set </mat-label>
+            <mat-select [(value)]="outputSet.variableSet" required>
+                <mat-option *ngFor="let variableSet of data.variableSets, let i = index" [value]="variableSet"> 
+                    {{variableSet.setName}} 
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label> Select a Grid Set </mat-label>
+            <mat-select [(value)]="outputSet.gridSet" required>
+                <mat-option *ngFor="let gridSet of data.gridSets, let i = index" [value]="gridSet"> 
+                    {{gridSet.setName}} 
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label> Select a Time Set </mat-label>
+            <mat-select [(value)]="outputSet.timeSet" required>
+                <mat-option *ngFor="let timeSet of data.timeSets, let i = index" [value]="timeSet"> 
+                    {{timeSet.setName}} 
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </ng-template>
+
+<mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+</mat-dialog-actions>

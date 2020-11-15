@@ -1,0 +1,73 @@
+<div class="row">
+  <div class="column-left" *ngIf="user">
+    <mat-toolbar>Account Settings</mat-toolbar>
+    <mat-list>
+        <mat-list-item><strong>Signed in as:</strong> {{ user.username }} </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item><a mat-button routerLink="." disabled>Account Info</a></mat-list-item>
+        <mat-list-item><a mat-button routerLink="." disabled>Security</a></mat-list-item>
+        <mat-list-item><a mat-button routerLink="." disabled>Privacy</a></mat-list-item>
+        <mat-list-item><a mat-button routerLink="." disabled>Notifications</a></mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item><a mat-button routerLink="/search">Bookmarks</a></mat-list-item>
+        <mat-list-item><a mat-button routerLink="." disabled>Comment History</a></mat-list-item>
+    </mat-list>
+  </div>
+  <div class="column-middle">
+    <mat-toolbar>Announcements</mat-toolbar>
+    <mat-list>
+        <mat-list-item><span>Announcements:</span>  New features coming soon! - Nov 27</mat-list-item>
+        <mat-list-item><span>Announcements:</span>  Upcoming system maintenance - Nov 12</mat-list-item>
+        <mat-list-item><span>Announcements:</span>  Welcome to the community - Nov 6</mat-list-item>
+    </mat-list>
+    <br>
+    <mat-toolbar>Recommended Works</mat-toolbar>
+      <ul *ngIf="recommended">
+        <li class="Rec-li" *ngFor="let img of recommended; index as i">
+          <mat-card class="Rec-img-card">
+            <a routerLink="/image-details" (click)="imageClick(img.title)"><img mat-card-image src="{{img.imageURL}}"></a>
+            <mat-card-content>
+              <h3> {{img.title}} </h3>
+              <p> {{RecUsersnames[i]}} </p>
+            </mat-card-content>
+          </mat-card>
+        </li>
+      </ul>
+  </div>
+  <div class="column-right">
+    <mat-toolbar>Daily Rankings</mat-toolbar>
+    <ul *ngIf="dailyRanking">
+      <li *ngFor="let img of dailyRanking; index as i">
+        <div class="row">
+          <div class="column">
+            <mat-card class="DRimg-card">
+              <a routerLink="/image-details" (click)="imageClick(img.title)"><img mat-card-image src="{{img.imageURL}}"></a>
+            </mat-card>
+          </div>
+          <div class="column">
+            <p class="title"> {{img.title}} </p>
+            <p class="creator"> by: {{DRUsernames[i]}} </p>
+            <p class="rank"><strong>{{i+1}}</strong></p>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <mat-toolbar>Popularity Ranking</mat-toolbar>
+    <ul *ngIf="popRanking">
+      <li *ngFor="let img of popRanking; index as i">
+        <div class="row">
+          <div class="column">
+            <mat-card class="DRimg-card">
+              <a routerLink="/image-details" (click)="imageClick(img.title)"><img mat-card-image src="{{img.imageURL}}"></a>
+            </mat-card>
+          </div>
+          <div class="column">
+            <p class="title"> {{img.title}} </p>
+            <p class="creator">by: {{PRUsernames[i]}} </p>
+            <p class="rank"><strong>{{i+1}}</strong></p>
+          </div>
+        </div>
+      </li>
+    </ul>    
+  </div>
+</div>

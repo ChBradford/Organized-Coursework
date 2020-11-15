@@ -1,0 +1,19 @@
+body{
+    text-align: center;
+    background-color: cyan;
+}
+
+.correct {
+    color: green;
+    font-size: 18pt;
+}
+
+.onehundred {
+    color: green;
+    font-size: 30pt;
+}
+
+.incorrect {
+    color: red;
+    font-size: 18pt;
+}

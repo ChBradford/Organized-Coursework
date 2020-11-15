@@ -1,0 +1,66 @@
+<h2 mat-dialog-title> Create a Level Set </h2>
+
+<div id = "content-container">
+
+    <mat-form-field>
+        <mat-label> Name this Level Set </mat-label>
+        <input matInput [(ngModel)]="levelSet.setName" placeholder="Level Set {{data.numLevelSets + 1}}" required>
+    </mat-form-field>
+
+    <br/>
+
+    <mat-form-field>
+        <mat-label> Select Record Type </mat-label>
+        <mat-select [(ngModel)]="levelSet.recordType" required>
+            <mat-option value="pressure"> Pressure </mat-option>
+            <mat-option value="height"> Height </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <br/>
+
+    <ng-template [ngIf]="levelSet.recordType == 'pressure' || levelSet.recordType == 'height'">
+        <mat-form-field>
+            <mat-label> Enter Start Value </mat-label>
+            <input type="number" matInput [(ngModel)]="levelSet.start" required>
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label> Enter Step Value </mat-label>
+            <input type="number" matInput [(ngModel)]="levelSet.step" required>
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label> Enter Last Value </mat-label>
+            <input type="number" matInput [(ngModel)]="levelSet.last" required>
+        </mat-form-field>
+        <br/>
+    </ng-template>
+
+    <ng-template [ngIf]="levelSet.recordType == 'pressure'">
+        <div *ngFor="let x of Arr(numPressures).fill(1); let i = index">
+            <mat-form-field>
+                <mat-label> Enter Pressure {{ i+1 }} </mat-label>
+                <input type="number" matInput [(ngModel)]="levelSet.pressures[i]" required>
+            </mat-form-field>
+            &nbsp;
+            <button mat-mini-fab color="warn" (click)="deletePressure(i)" *ngIf="numPressures > 1">
+                <mat-icon>delete</mat-icon>
+            </button>
+            <br/>
+        </div>
+        <button mat-raised-button color="accent" (click)="addPressure()">Add Another Pressure</button>
+        <br/>
+        
+    </ng-template>
+
+    <mat-dialog-actions>
+        <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div *ngIf="levelSet.recordType == 'pressure' && numPressures > 1">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <button mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+    </mat-dialog-actions>
+</div>

@@ -1,0 +1,62 @@
+.carname{
+    font-size: 2em;
+}
+.cardetails{
+    font-size:1.2em;
+    padding-right:50px;
+    padding-bottom:20px;
+}
+.carpic,.cardetails,.carname{
+    display: inline-block;
+}
+.Text{
+    padding-left: 15px;
+}
+
+#title, #cars{
+    padding-left: 10px;
+}
+
+.buttons {
+    float: right;
+    margin-right: 25px;
+}
+
+body {
+    background-color: #f4f8ff;
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #dddddd;
+}
+
+.table-price {
+    text-align: center;
+    width: 125px;
+}
+
+.table-desc {
+    text-align: left;
+}
+
+.table-img {
+    width: 250px;
+    text-align: center;
+}
+
+.table-carName {
+    font-size: 32pt;
+}

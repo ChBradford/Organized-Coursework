@@ -1,0 +1,44 @@
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #dddddd;
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+
+.table-price {
+    text-align: center;
+    width: 125px;
+}
+
+.table-desc {
+    text-align: left;
+}
+
+.table-img {
+    width: 250px;
+    text-align: center;
+}
+
+.table-carName {
+    font-size: 32pt;
+}
+
+#tot{
+    float:right;
+    padding-right: 10px;
+}
+
+body {
+    background-color: #f4f8ff;
+}

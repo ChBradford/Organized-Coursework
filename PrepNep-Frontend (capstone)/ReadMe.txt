@@ -1,0 +1,3 @@
+This is my capstone project developed with three other peers, I mostly worked on the file generation and data-output as well as a general cleanup of code. The purpose of this project is prototype a system to calibrate and output weather-data files for meteorologists to put through rigorous and complex weather calculations easily.
+
+This project uses angular material for UI, Javascript and Typescript to tie multiple components together to create a cohesive file output based on the data that the user desires, and Angular & CSS to make it look good.

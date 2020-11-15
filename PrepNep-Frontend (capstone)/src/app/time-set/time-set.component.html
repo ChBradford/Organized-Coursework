@@ -1,0 +1,55 @@
+<h2 mat-dialog-title> Create a Time Set </h2>
+
+    <mat-form-field>
+        <mat-label> Name this Time Set </mat-label>
+        <input matInput [(ngModel)]="timeSet.setName" placeholder="Time Set {{data.numTimeSets + 1}}" required>
+    </mat-form-field>
+
+    <br/>
+    <!--
+    <mat-form-field>
+        <mat-label> Select Record Type </mat-label>
+        <mat-select [(ngModel)]="timeSet.recordType" required>
+            <mat-option value="time"> Time </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <br/>
+
+    <mat-form-field>
+        <mat-label> Select Interval Type </mat-label>
+        <mat-select [(ngModel)]="timeSet.intervalType" required>
+            <mat-option value="rule"> Rule </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <br/>
+
+    <ng-template [ngIf]="timeSet.recordType == 'time' && timeSet.intervalType == 'rule'">
+    -->
+        <mat-form-field>
+            <mat-label> Enter Start Value </mat-label>
+            <input type="number" matInput [(ngModel)]="timeSet.start" required>
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label> Enter Step Value </mat-label>
+            <input type="number" matInput [(ngModel)]="timeSet.step" required>
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label> Enter Last Value </mat-label>
+            <input type="number" matInput [(ngModel)]="timeSet.last" required>
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label> Enter Timescale Value </mat-label>
+            <input type="number" matInput [(ngModel)]="timeSet.timescale" required>
+        </mat-form-field>
+    <!--</ng-template>-->
+
+<mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+</mat-dialog-actions>

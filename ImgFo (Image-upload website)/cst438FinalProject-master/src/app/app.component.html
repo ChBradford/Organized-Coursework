@@ -1,0 +1,30 @@
+<header>
+  <div class="container">
+    <a routerLink="/" class="logo">ImgFo</a>
+    <ng-template [ngIf]= "userId" [ngIfElse]="none">
+    <nav>
+      <ul>
+        <li><a href="#" routerLink="/user-home">Home</a></li>
+        <li><a href="#" routerLink="/search-page">Search</a></li>
+        <li><a href="#" routerLink="/upload">Post</a></li>
+        <li><a href="#" routerLink="/search">Bookmarks</a></li>
+        <li><a href="#" (click)="logout()" routerLink="/sign-in">Logout</a></li>
+      </ul>
+    </nav>
+  </ng-template>
+  <ng-template #none>
+      <nav>      
+        <ul>
+          <li><a href="#" routerLink="/">Home</a></li>
+          <li><a href="#" routerLink="/create-account">Create Account</a></li>
+          <li><a href="#" routerLink="/sign-in">Sign In</a></li>
+        </ul>
+      </nav>
+  </ng-template>
+
+  </div>
+</header>
+
+<div class="container">
+  <router-outlet></router-outlet> <!--Display the value of whatever the link is-->
+</div>

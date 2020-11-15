@@ -1,0 +1,24 @@
+.details-container {
+    padding: 3em;
+    //background: red;
+    margin-bottom: 1em;
+    min-width: 300px;
+}
+
+.img-card {
+    max-width: 950px;
+    margin: 0 auto;
+    transition: none !important;
+    box-shadow: none !important;
+    
+  }
+
+#img-descriptor {
+   text-align: left;
+   font-size: 32px; 
+   padding: none;
+}
+
+#icon {
+  padding-bottom: 0.5em;
+}

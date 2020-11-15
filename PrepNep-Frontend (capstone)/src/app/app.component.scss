@@ -1,0 +1,179 @@
+#Boxholder{
+    text-align:center;
+}
+.Limitholder{
+    outline-style: solid;
+    height: 350px;
+    width: 300px;
+    display: inline-block;
+    justify-content: center;
+    display:flex-end;
+    align-items: center;
+    position: relative;
+    padding: 15px;
+    margin: 5px;
+}
+.Limiters{
+    display:flex;
+    outline-style:solid;
+    overflow: auto;
+    height: 250px;
+    width:300px;
+}
+.Button-holder{
+    padding-top: 2.5px;
+    font-size: 1.5em;
+    margin:0px 0px 0px 0px;
+}
+.LimiterButton{
+    display: inline-block;
+    margin: 10px;
+}
+
+#Boxholder{
+    height: 400px;
+}
+
+div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  width: 75%;
+  max-height: calc(26vh);
+  text-align: center;
+  display: inline-block;
+}
+
+div.scrollmenu2 {
+  overflow: auto;
+  white-space: nowrap;
+  max-height: calc(20vh);
+  text-align: center;
+  display: inline-block;
+}
+
+div.empty {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  width: 75%;
+  text-align: center;
+  display: inline-block;
+}
+
+#scroll_wrapper {
+    text-align: center;
+}
+  
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+th, td {
+  color: white;
+  text-align: center;
+  padding: 14px;
+  margin-right: 75px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+td {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.small {
+  width: 6%;
+}
+
+.large {
+  width: 14%;
+}
+
+span {
+  font-weight: bold;
+  background: lightgray;
+  padding: .3em .8em;
+  cursor: pointer;
+}
+
+h1 {
+  color: white;
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+#btn_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.container, .container2 {
+  //width: 200px;
+  //clear: both;
+  display: inline-block;
+  text-align: right;
+}
+
+#physics {
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+}
+.domainspacer{
+  width: 10px;
+  display: inline-block;
+}
+
+#AllDomain {
+  display: inline-block;
+  text-align: center;
+}
+
+/*.container input, .container2 input {
+  //width: 100%;
+  //clear: both;
+}*/
+
+#DomainPhysics {
+  text-align: center;
+}
+
+.physicsspacer {
+  display: inline-block;
+  width: 100px;
+}
+
+.material-icons.red { 
+  color: rgb(255, 23, 23); 
+  cursor: pointer;
+}
+
+h2 {
+  margin: 0em;
+  padding-bottom: 0.2em;
+}
+
+h3 {
+  margin: 0em;
+}

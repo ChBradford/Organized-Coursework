@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This is the flight_display page-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical" >
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Available flights:" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Flight No. | Departure | Arrival | Departure time | Capacity | Price"
+        android:textSize="12sp"/>
+
+    <Button
+        android:id="@+id/fbutton0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textSize="12sp"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/fbutton1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textSize="12sp"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/fbutton2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textSize="12sp"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/fbutton3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textSize="12sp"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/fbutton4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textSize="12sp"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/fbutton5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textSize="12sp"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/fbutton6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textSize="12sp"
+        android:background="@android:color/transparent"/>
+</LinearLayout>

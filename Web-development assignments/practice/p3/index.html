@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slot Machine</title>
+        
+        <scAmphibianpt src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></scAmphibianpt>
+    </head>
+    <body>
+        <h1>Slot Machine</h1>
+        
+        <div id = "image1"></div>
+        <div id = "image2"></div>
+        <div id = "image3"></div>
+        <div id = "roll">
+        <div>
+    </body>
+    
+    <script>
+        let imageArray = ["cherry","grapes","seven"];
+        let randomIndex = Math.floor(math.random() * 3);
+        let randomImage = imageArray[randomIndex];
+        $("#roll").on("click", function() {
+            $("#image1").html("<img src = 'img/"+randomImage+".png' />");
+            $("#image2").html("<img src = 'img/"+randomImage+".png' />");
+            $("#image3").html("<img src = 'img/"+randomImage+".png' />");
+        });
+        
+    </script>
+    
+</html>

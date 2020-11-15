@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Weather </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/styles.css">
+<script>
+    /* global $*/
+    let t = 0;
+    
+    function weather() {
+        var i;
+        $.ajax({
+             method: "GET",
+                url: "api/mapsProxy.php",
+            dataType: "json",
+                data: { "lat":$("#lat").val(),
+                        "long":$("#long").val()},
+             success: function(data, status) {
+                $("#timezone").html("Timezone at these coordinates: " + data.timezone);
+                $("#Aweather").html("This week's forcast at these coordinates: " + data.daily.summary);
+                $("#Tweather").html("Today's forcast at these coordinates: " + data.hourly.summary);
+                $("#img").html("<img src = img/" + data.daily.icon + ".jpg alt = 'pic' />")
+                
+                i = data.daily.icon;
+               
+               $.ajax({
+                    type: "GET",
+                    url: "api/saveData.php",
+                    dataType: "json",
+                    data : {"long": $("#long").val(),
+                        "lat": $("#lat").val(),
+                        "icon": i,
+                    },
+                }); 
+            }
+        }); //ajax
+                if(t > 0){
+                $.ajax({
+                    type: "GET",
+                    url: "api/getData.php",
+                    dataType: "json",
+                    //data : {},
+                success: function(data,status){
+                    $("#pdata").append("<p class = 'locs'>" + (t-1) + ". At " + data.longitude + ", " + data.latitude + " the forcast was " + data.weather + "<p>");
+                    $("#pe").hide();
+                }
+                });
+                }
+                else{
+                    $("#pe").html("submit one more time to start seeing previous data.");
+                }
+                t++;
+    }//searchImage()
+    
+    
+
+</script>
+</head>
+<body>
+
+<h1> Weather </h1>
+Please enter the longitude and latitude! <br><br>
+longitude: <input type="text" id="long" size = "5"/> <br><br>
+latitude: <input type="text" id="lat" size = "5"/><br><br>
+<button onclick="weather()"> Search </button> <br>
+<br /><br />
+
+<div id="data">
+    <p id = "timezone"></p> <br> 
+    <p id = "Aweather">  </p> <br>
+    <p id = "Tweather"></p> <br>
+    <div id = "img"/>
+</div>
+<p id = "pnote"> Previous Data: </p>
+<div id = "pdata"> <p id = "pe"></p></div>
+
+</body>
+</html>

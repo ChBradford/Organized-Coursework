@@ -1,0 +1,210 @@
+<div id = "DomainPhysics">
+  <div id = "AllDomain">
+    <h2>Domain Setup</h2>
+    <div id = "Domain Setup" class = "container">
+      <h3>nop
+        <mat-form-field>
+          <mat-label> assign nop value </mat-label>
+          <input type="number" matInput [(ngModel)]="nop" required>
+        </mat-form-field>
+      </h3>
+      <h3>nel [xy]
+        <mat-form-field>
+          <mat-label> assign nel [xy] value </mat-label>
+          <input type="number" matInput [(ngModel)]="nel_xy" required>
+        </mat-form-field>
+      </h3>
+    </div>
+    <div class = "domainspacer"></div>
+    <div id = "Domain Setup2" class = "container2">
+      <h3>	nel z
+        <mat-form-field>
+          <mat-label> assign nel z value </mat-label>
+          <input type="number" matInput [(ngModel)]="nel_z" required>
+        </mat-form-field>
+      </h3>
+      <h3>	&Delta;t
+        <mat-form-field>
+          <mat-label> assign 	&Delta;t value </mat-label>
+          <input type="number" matInput [(ngModel)]="delta_t" required>
+        </mat-form-field>
+      </h3>
+    </div>
+    <div class = physicsspacer></div>
+  </div>
+  <div id = "physics">
+    <h2 id = "pytxt"> Physics </h2>
+    <h3> Choose a CCPP file
+      <mat-form-field>
+        <mat-label> Select CCPP File </mat-label>
+        <mat-select [(ngModel)]="physics" required>
+            <mat-option value="RAMS.xml"> RAMS.xml </mat-option>
+            <mat-option value="FV3GFS.xml"> FV3GFS.xml </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </h3>
+  </div>
+</div>
+
+<div>
+  <div id = "Boxholder">
+    <div class = "Limitholder">
+      <p class = "LimitedText">Level Sets</p>
+      <div class = "Limiters" id = "Level-set">
+        <mat-radio-group
+        aria-labelledby="example-radio-group-label"
+        class="example-radio-group"
+        [(ngModel)]="pickedLevelSet">
+          <mat-radio-button class="example-radio-button" *ngFor="let levelSet of levelSets, let i = index" [value]="levelSet">
+            {{levelSet.setName}}
+            &nbsp;
+            <button mat-mini-fab color="basic" (click)="editSet('Level', i)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            &nbsp;
+            <button mat-mini-fab color="warn" (click)="deleteSet('Level', i)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class = "Button-holder">
+        <button class = "LimiterButton" mat-raised-button color="accent" (click)="createSet('Level')">
+          Create Level Set
+        </button>
+      </div>
+    </div>
+    <div class = "Limitholder">
+      <p class = "LimitedText">Variable Sets</p>
+      <div class = "Limiters" id = "Variable-set">
+        <mat-radio-group
+        aria-labelledby="example-radio-group-label"
+        class="example-radio-group"
+        [(ngModel)]="pickedVariableSet">
+          <mat-radio-button class="example-radio-button" *ngFor="let variableSet of variableSets, let i = index" [value]="variableSet">
+            {{variableSet.setName}}
+            &nbsp;
+            <button mat-mini-fab color="basic" (click)="editSet('Variable', i)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            &nbsp;
+            <button mat-mini-fab color="warn" (click)="deleteSet('Variable', i)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class = "Button-holder">
+        <button class = "LimiterButton" mat-raised-button color="accent" (click)="createSet('Variable')">
+          Create Variable Set
+        </button>
+      </div>
+    </div>
+    <div class = "Limitholder">
+      <p class = "LimitedText">Output Grid</p>
+      <div class = "Limiters" id = "Output-grid">
+        <mat-radio-group
+        aria-labelledby="example-radio-group-label"
+        class="example-radio-group"
+        [(ngModel)]="pickedGridSet">
+          <mat-radio-button class="example-radio-button" *ngFor="let gridSet of gridSets, let i = index" [value]="gridSet">
+            {{gridSet.setName}}
+            &nbsp;
+            <button mat-mini-fab color="basic" (click)="editSet('Grid', i)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            &nbsp;
+            <button mat-mini-fab color="warn" (click)="deleteSet('Grid', i)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class = "Button-holder">
+        <button class = "LimiterButton" mat-raised-button color="accent" (click)="createSet('Grid')">
+          Create Grid Set
+        </button>
+      </div>
+    </div>
+    <div class = "Limitholder">
+      <p class = "LimitedText">Time Sets</p>
+      <div class = "Limiters" id = "Time-set">
+        <mat-radio-group
+        aria-labelledby="example-radio-group-label"
+        class="example-radio-group"
+        [(ngModel)]="pickedTimeSet">
+          <mat-radio-button class="example-radio-button" *ngFor="let timeSet of timeSets, let i = index" [value]="timeSet">
+            {{timeSet.setName}}
+            &nbsp;
+            <button mat-mini-fab color="basic" (click)="editSet('Time', i)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            &nbsp;
+            <button mat-mini-fab color="warn" (click)="deleteSet('Time', i)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class = "Button-holder">
+        <button class = "LimiterButton" mat-raised-button color="accent" (click)="createSet('Time')">
+          Create Time Set
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="btn_wrapper">
+    <button mat-raised-button color="primary" (click)="createSet('Output')">Create Output Set</button>
+  </div>
+  <br/>
+
+  <ng-template [ngIf]="outputSets.length > 0" [ngIfElse]="noOutputSets">
+    <div id="scroll_wrapper">
+      <div class="scrollmenu">
+        <table>
+          <tr>
+            <td class="small"> </td>
+            <td class="large"> Name </td>
+            <td class="large"> Level </td>
+            <td class="large"> Variable </td>
+            <td class="large"> Grid </td>
+            <td class="large"> Time </td>
+            <td class="small"> Edit </td>
+            <td class="small"> Delete </td>
+          </tr>
+          <tr *ngFor="let outputSet of outputSets; let i = index">
+            <td> {{ outputSets.length - i }} </td>
+            <td> {{ outputSets[outputSets.length-1-i].setName }} </td>
+            <td> {{ outputSets[outputSets.length-1-i].levelSet.setName }} </td>
+            <td> {{ outputSets[outputSets.length-1-i].variableSet.setName }} </td>
+            <td> {{ outputSets[outputSets.length-1-i].gridSet.setName }} </td>
+            <td> {{ outputSets[outputSets.length-1-i].timeSet.setName }} </td>
+            <td>
+              <button mat-raised-button color="basic" (click)="editSet('Output', outputSets.length-1-i)">
+                <mat-icon>edit</mat-icon>
+              </button>
+            </td>
+            <td>
+              <button mat-raised-button color="warn" (click)="deleteSet('Output', outputSets.length-1-i)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template #noOutputSets>
+    <div id="scroll_wrapper">
+      <div class="empty">
+        <h1> No output sets have been made yet! </h1>
+      </div>
+    </div>
+  </ng-template>
+</div>
+
+<div id="btn_wrapper">
+  <button mat-raised-button color="primary" id = "Createfile" (click)="exportFile()">Download Files</button>
+</div>

@@ -1,0 +1,47 @@
+<h2 mat-dialog-title> Create a Variable Set </h2>
+
+<div id = "content-container">
+    <mat-form-field>
+        <mat-label> Name this Variable Set </mat-label>
+        <input matInput [(ngModel)]="variableSet.setName" placeholder="Variable Set {{data.numVariableSets + 1}}" required>
+    </mat-form-field>
+
+    <br/>
+
+    <!--
+    <mat-form-field>
+        <mat-label> Select Record Type </mat-label>
+        <mat-select [(ngModel)]="variableSet.recordType" required>
+            <mat-option value="varset"> Varset </mat-option>
+        </mat-select>
+    </mat-form-field>
+    
+    <br/>
+    -->
+    
+    <!--<ng-template [ngIf]="variableSet.recordType == 'varset'">-->
+        <div *ngFor="let x of Arr(numVariables).fill(1); let i = index">
+            <mat-form-field>
+                <mat-label> Enter Variable {{ i+1 }} </mat-label>
+                <input matInput [(ngModel)]="variableSet.variables[i]" required>
+            </mat-form-field>
+            &nbsp;
+            <button mat-mini-fab color="warn" (click)="deleteVariable(i)" *ngIf="numVariables > 1">
+                <mat-icon>delete</mat-icon>
+                </button>
+            <br/>
+        </div>
+        <button mat-raised-button color="accent" (click)="addVariable()">Add Another Variable</button>
+        <br/>
+        
+    <!--</ng-template>-->
+
+    <mat-dialog-actions>
+        <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div *ngIf="numVariables > 1">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <button mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+    </mat-dialog-actions>
+</div>

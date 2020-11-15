@@ -1,0 +1,23 @@
+body {
+    text-align: center;
+    font-size:1.2em;
+    background-color: #a57bb6 !important;
+}
+
+img {
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.favorite {
+    cursor: pointer;
+}
+
+button {
+    text-align: center;
+    font-size:.8em;
+}
+
+#keywords{
+    font-size:1.2em;
+}

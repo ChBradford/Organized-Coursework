@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Sign Up 2- PHP Web API Edition </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        
+        <script>
+            /*global $*/
+            
+            $(document).ready(function() {
+                $("#username1").change(function() {
+                    $.ajax({
+                        type: "GET",
+                        url: "api/checkUsername_text.php",
+                        data: { "username":$("#username1").val() },
+                        success: function(data,status) {
+                            $("#username1Error").html(data);
+                            if(data == "Available!")
+                            $("#username1Error").css("color", "green");
+                            if(data == "Not Available!")
+                            $("#username1Error").css("color", "red");
+                        },
+                        complete: function(data,status) { //optional, used for debugging purposes
+                        //alert(status);
+                        }
+                    
+                    });//ajax
+                });
+                
+                $("#username2").change(function() {
+                    $.ajax({
+
+                        type: "GET",
+                        url: "api/checkUsername_json.php",
+                        dataType: "json",
+                        data: { "username":$("#username2").val() },
+                        success: function(data,status) {
+                        //alert(data);
+                            if(data.available){
+                                $("#username2Error").html("Username is available!");
+                                $("#username2Error").css("color", "green");
+                            }
+                            else {
+                                $("#username2Error").html("Username is unavailable!");
+                                $("#username2Error").css("color", "red");
+                            }
+                        },
+                        complete: function(data,status) { //optional, used for debugging purposes
+                        //alert(status);
+                        }
+                    
+                    });//ajax  
+                });//username2 change
+                
+                
+                 $("#password").on("click", function(){
+                    
+                    //alert("hi");
+                    
+                    $.ajax({
+
+                        type: "GET",
+                        url: "api/strongPwdAPI.php",
+                        dataType: "json",
+                        data: {"length" : "10" },
+                        success: function(data,status) {
+                          
+                          $("#recommendedpw").html(" Potentially strong password: " + data.suggestedPwd);
+                        
+                        },
+                        complete: function(data,status) { //optional, used for debugging purposes
+                        //alert(status);
+                        }
+                        
+                    });//ajax
+                    
+                }); //passwordClick 
+                
+                
+             $("#password").on("change", function(){
+                    
+                    //alert("hi");
+                    
+                    $.ajax({
+
+                        type: "GET",
+                        url: "api/validatePwd.php",
+                        dataType: "json",
+                        data: {"username" : $("#username1").val(),
+                               "pwd" : $("#password").val()
+                        },
+                        success: function(data,status) {
+                          if(data.validPwd == false){
+                            $("#similar").show();
+                            $("#similar").html("Password cannot contain the username.");
+                            $("#similar").css("color","red");
+                          }
+                          else if(data.validPwd == true){
+                            $("#similar").hide();
+                          }
+                        
+                        },
+                        complete: function(data,status) { //optional, used for debugging purposes
+                        //alert(status);
+                        }
+                        
+                    });//ajax
+                    
+                }); //passwordClick                
+                    
+            });//documentReady
+            
+            
+            
+           
+            
+            
+        </script>
+    </head>
+    
+    <body>
+        <div class="jumbotron">
+            <h1>Sign up</h1>
+        </div>
+            </legend>
+        <fieldset>
+            <legend>
+            <p>
+            <label for = "fname">First Name: </label>
+            <input type="text" id="firstName" name="firstName" /> <br />
+            </p><p>
+            <label for = "lname">Last Name: </label>
+            <input type="text" id="lastName" name="lastName" /> <br />
+            <br />
+            </p><p>
+            
+            <label for = "uname">Username: </label>
+            <input type="text" id="username1" />
+            <span id="username1Error"></span> <br />
+            </p><p>
+            
+            <label for = "uname2">Second Username: </label>
+            <input type="text" id="username2" />
+            <span id="username2Error" class="error"></span> <br />
+            <br />
+            </p><p>
+            <label for = "pwd">Password: </label>
+            <input type="password" id="password">
+            <span id="recommendedpw"></span> <br />
+            <span id="similar" class="error"></span> <br />
+            <br />
+            </p>
+            
+            <button> Sign up!</button>
+        </fieldset>
+    </body>
+</html>

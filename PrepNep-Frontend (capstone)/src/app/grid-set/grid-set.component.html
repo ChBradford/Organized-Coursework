@@ -1,0 +1,44 @@
+<h2 mat-dialog-title> Create a Grid Set </h2>
+
+    <mat-form-field>
+        <mat-label> Name this Grid Set </mat-label>
+        <input matInput [(ngModel)]="gridSet.setName" placeholder="Grid Set {{data.numGridSets + 1}}" required>
+    </mat-form-field>
+
+    <br/>
+
+    <!--
+    <mat-form-field>
+        <mat-label> Select Record Type </mat-label>
+        <mat-select [(ngModel)]="gridSet.recordType" required>
+            <mat-option value="grid"> Grid </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <br/>
+    -->
+
+    <mat-form-field>
+        <mat-label> Select Grid Type </mat-label>
+        <mat-select [(ngModel)]="gridSet.gridType" required>
+            <mat-option value="latlon"> Lat-Lon </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <br/>
+
+    <ng-template [ngIf]="gridSet.gridType == 'latlon'">
+        <mat-form-field>
+            <mat-label> Enter Spacing Value </mat-label>
+            <input type="number" matInput [(ngModel)]="gridSet.spacing" required>
+        </mat-form-field>
+        <br/>
+    </ng-template>
+
+    <br/>
+
+<mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+</mat-dialog-actions>

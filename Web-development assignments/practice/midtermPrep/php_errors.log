@@ -1,0 +1,29 @@
+[28-Mar-2019 14:24:44 UTC] PHP Warning:  include(../../../inc/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/practice/midtermPrep/api/getRandomItem.php on line 2
+[28-Mar-2019 14:24:44 UTC] PHP Stack trace:
+[28-Mar-2019 14:24:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midtermPrep/api/getRandomItem.php:0
+[28-Mar-2019 14:24:44 UTC] PHP Warning:  include(): Failed opening '../../../inc/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/practice/midtermPrep/api/getRandomItem.php on line 2
+[28-Mar-2019 14:24:44 UTC] PHP Stack trace:
+[28-Mar-2019 14:24:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midtermPrep/api/getRandomItem.php:0
+[28-Mar-2019 14:24:44 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336/practice/midtermPrep/api/getRandomItem.php on line 3
+[28-Mar-2019 14:24:44 UTC] PHP Stack trace:
+[28-Mar-2019 14:24:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midtermPrep/api/getRandomItem.php:0
+[28-Mar-2019 17:43:47 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/practice/midtermPrep/api/getCodes.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/practice/midtermPrep/api/getCodes.php(8): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/practice/midtermPrep/api/getCodes.php on line 8
+[28-Mar-2019 17:44:05 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/practice/midtermPrep/api/getCodes.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/practice/midtermPrep/api/getCodes.php(8): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/practice/midtermPrep/api/getCodes.php on line 8
+[28-Mar-2019 19:37:03 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336/practice/midtermPrep/api/getProductPrice.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/practice/midtermPrep/api/getProductPrice.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/practice/midtermPrep/api/getProductPrice.php on line 14
+[28-Mar-2019 19:42:03 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336/practice/midtermPrep/api/getProductPrice.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/practice/midtermPrep/api/getProductPrice.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/practice/midtermPrep/api/getProductPrice.php on line 15

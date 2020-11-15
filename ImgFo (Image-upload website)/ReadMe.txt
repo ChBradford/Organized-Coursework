@@ -1,0 +1,1 @@
+This is a full-stack website inspired by websites such as Pixiv that allows for the user to search images based on tags and titles, favoriting images as they go; users can also upload their own images with tags, titles, etc to be saved to a (local) database. Technologies used include springboot, mongo DB, Java, and Angular. 

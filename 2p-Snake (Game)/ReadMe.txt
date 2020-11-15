@@ -1,0 +1,1 @@
+This is a simple two-player snake game developed in c++ using an engine designed by my professor.

@@ -1,0 +1,1 @@
+This assignment was completed in python, taking two clients and running them into a TCP server to 'chat', taking messages from both and outputting which message came in first.

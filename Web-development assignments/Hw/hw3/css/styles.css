@@ -1,0 +1,24 @@
+body{
+    text-align: center;
+    background-image: url("../img/Cookie-bg.jpg");
+    background-size: cover;
+}
+#fortune{
+    padding-bottom: 30px;
+}
+#cookieInfo{
+    padding-top: 50px;
+    margin:auto;
+    width:500px;
+}
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+}
+
+button{
+    background-image:url("../img/cookies.png");
+    background-size: cover;
+    padding: 25px;
+    font-weight:bold;
+}

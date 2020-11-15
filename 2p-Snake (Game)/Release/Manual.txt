@@ -1,0 +1,5 @@
+This is just a simple light racer game, 
+Player 1 controls with arrow keys (blue line)
+Player 2 controls with wasd	  (green line)
+
+\o/ Enjoy!

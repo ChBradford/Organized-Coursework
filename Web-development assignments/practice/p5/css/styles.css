@@ -1,0 +1,11 @@
+#stuff{
+   display: block;
+   float: right;
+   padding-right: 800px;
+}
+#comments{
+    font-size: 1.2em;
+}
+#buttons{
+    display:block;
+}

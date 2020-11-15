@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title> Hangman</title>
+        
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link  href="css/styles.css" rel="stylesheet" type="text/css" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+    <script>
+        /*global $*/
+        var guesses = 6;
+        function getWord(){
+            
+            //Ajax call to get the word_id and its length from the database 
+              $.ajax({
+                    type: "GET",
+                    url: "api/get_word_api.php",
+                    dataType: "json",
+                    data: { },
+                success: function(data,status) {
+                    
+                     $("#wordId").val(data.word_id);
+                     
+                     for(var i = 0; i < data.length; i++){
+                         $("#blank").append("__ ");
+                     }
+                },
+                complete: function(data,status) { 
+                //alert(status);
+                }
+
+                });//ajax
+        }
+        
+        $(document).ready(function(){
+         
+               
+              //getWord Function gets the random word from the database.    
+              getWord();
+        
+              //Ajax call to check the letter in the selected word  
+              $("#submit").click( function(){  
+                  var letter = $("#insert").val();
+                  $("#guessed").append(letter)
+                  $.ajax({
+                    type: "get",
+                    url: "api/check_word.php",
+                    data: { 
+                         "letter":letter,
+                         "word_Id":$("#wordId"),
+                        },
+                    success: function(data,status) {
+                        
+                         
+                      },
+                      complete: function(data,status) { //optional, used for debugging purposes
+                          //alert(status);
+                      }
+                  });//AJAX  
+             } );//username changes
+         
+        })
+        
+    </script>
+    
+    </head>
+    <body>
+    
+       <h1>Hangman</h1> 
+        </br>
+        
+        <h4 id="insert"> Insert a Letter:  
+        <input type="text"  onkeyup="this.value = this.value.toLowerCase();" id ="letter" name="Letter" maxlength="1"/> 
+        <button id="submit">Submit</button></h4>
+        <br/>
+        <br/>
+        <div id = "blank"></div> <br>
+        <div id = "guessed">Letters guessed: </div>
+        <input type="hidden" id="wordId" >
+      
+         <div id="man">
+                <img src="img/stick_0.png" class="manImg" id="hangImg">
+        </div>
+    </body>
+
+</html>
+    

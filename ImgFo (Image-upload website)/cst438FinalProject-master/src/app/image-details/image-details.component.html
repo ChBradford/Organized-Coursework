@@ -1,0 +1,25 @@
+<div class="details-container" *ngIf="image"> 
+    <mat-card class="img-card">
+        <mat-card-header>
+            <div mat-card-avatar class="header-image"></div>
+            <mat-card-title></mat-card-title>
+            <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{ image.imageURL }}">
+        <mat-card-content>
+
+            <span id="img-descriptor"> {{ image.title }}  <button mat-icon-button color="primary"> <mat-icon id="icon" (click)="onBookmark()" >{{ icon }}</mat-icon> </button></span>
+            <p *ngIf="imageCreator" ><strong>Created by:</strong> {{ imageCreator.username }} </p>
+            <br/>
+            <br/>
+            <mat-chip-list aria-label="image tags">
+                <mat-chip *ngFor="let tag of image.tags"> {{ tag }}</mat-chip>
+            </mat-chip-list>
+            <br/>
+            <br/>            
+            <p id ="description"><strong>Description:</strong> {{ image.description }} </p>
+        </mat-card-content>
+        <mat-card-actions>
+        </mat-card-actions>
+    </mat-card>    
+</div>

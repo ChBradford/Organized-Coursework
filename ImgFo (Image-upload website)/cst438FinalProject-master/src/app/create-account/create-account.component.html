@@ -1,0 +1,22 @@
+<body>
+        <h1>Create Account</h1>
+        <div>
+            Email: <input type="text" name="email" [(ngModel)]="email">
+        </div>
+        <br />
+        <div>
+            Username: <input type="text" name="username" [(ngModel)]="username">
+        </div>
+        <br />
+        <div>
+            Password: <input type="password" name="password" [(ngModel)]="password">
+        </div>
+        <br />
+        <div>
+            <button (click)="createAcc()" class="btn btn-success">Create Account</button>
+        </div>
+        <br />
+        <h3 id="error">
+            {{error}}
+        </h3>
+    </body>
